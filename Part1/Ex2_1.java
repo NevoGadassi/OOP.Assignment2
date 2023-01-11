@@ -6,9 +6,16 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-public class Ex2_1 extends LineThread {
+public class Ex2_1  {
 
 
+    /**
+     * create n new files and write in each file contains random lines of "hello world"
+     * @param n amount of file
+     * @param seed seed to random
+     * @param bound bound to random
+     * @return string array with the names of the new files
+     */
     public static String[] createTextFiles(int n, int seed, int bound)
     {
         Random rand = new Random(seed);
@@ -35,6 +42,12 @@ public class Ex2_1 extends LineThread {
         }
         return filearr;
     }
+
+    /**
+     * Calculates the total number of lines of all files in the usual way, each file in order one by one
+     * @param fileNames string array with the names of the new files
+     * @return the total number of lines of all files
+     */
     public static int getNumOfLines(String[] fileNames)
     {
         int sum=0;
@@ -51,6 +64,13 @@ public class Ex2_1 extends LineThread {
         }
             return sum;
     }
+
+    /**
+     * Creates a Thread for each file, runs it and with its help calculates the number of lines for each file.
+     * Until one Thread does not finish, the other does not start
+     * @param fileNames string array with the names of the new files
+     * @return the total number of lines of all files
+     */
     public static   int getNumOfLinesThreads(String[] fileNames)
     {
        LineThread specificfile;
@@ -64,6 +84,12 @@ public class Ex2_1 extends LineThread {
     }
         return sum;
     }
+    /**
+     Creates a Thread for each file,add all Thread to pool and run all Thread together.
+     its help calculates the number of lines for each file in the same time .
+     * @param fileNames string array with the names of the new files
+     * @return the total number of lines of all files
+     */
     public static int getNumOfLinesThreadPool(String[] fileNames)
     {
 
