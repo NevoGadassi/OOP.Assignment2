@@ -58,6 +58,8 @@ public class Ex2_1 extends LineThread {
        for(int i=0;i< fileNames.length;i++){
            specificfile=new LineThread(fileNames[i]);
             specificfile.run();
+           while ((specificfile.isAlive())) {
+           }
             sum=sum+specificfile.getLine();
     }
         return sum;
@@ -88,10 +90,6 @@ public class Ex2_1 extends LineThread {
 
 
     public static void main(String[] args) {
-        String [] filenames=new String[10];
-       filenames= createTextFiles(10, 1, 100);
-        int lines=getNumOfLinesThreadPool(filenames);
-        System.out.println(lines);
     }
 
 
