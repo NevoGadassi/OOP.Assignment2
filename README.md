@@ -76,7 +76,17 @@ In contrast to run , call return value and can throw exceptions
             lines = Ex2_1."choose function to runtime"(filesname);
             end = System.currentTimeMillis();
             finaltime=end-start;
- if we run this class we can see that  the faster way from the functions is the threadpool, after it the Thread and the slower way is the usal way of loop.
+            
+ if we run this class we can see that 
+ 
+Calculation time using function 2-lines:7376961 time: 1193ms
+
+Calculation time using function 3-lines:7376961 time: 1143ms
+
+Calculation time using function 4-lines:7376961 time: 540ms
+
+
+ the faster way from the functions is the threadpool, after it the Thread and the slower way is the usal way of loop.
 
 it's clear that the threadpool is the faster because its call to each file in the same time and save the answer
 and in the normal way we calculate file finish and start calculate the next one and its waste time
