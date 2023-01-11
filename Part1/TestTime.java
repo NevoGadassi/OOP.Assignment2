@@ -10,19 +10,19 @@
             lines = Ex2_1.getNumOfLines(filesname);
             end = System.currentTimeMillis();
             finaltime=end-start;
-            System.out.println("Calculation time using function 2  -  lines: "+ lines +" time: "+finaltime+"ms");
+            System.out.println("Calculation time using function 2-lines:"+ lines +" time: "+finaltime+"ms");
 
             start = System.currentTimeMillis();
             lines = Ex2_1.getNumOfLinesThreads(filesname);
             end = System.currentTimeMillis();
             finaltime=end-start;
-            System.out.println("Calculation time using function 3 -  lines: "+ lines +" time: "+finaltime+"ms");
+            System.out.println("Calculation time using function 3-lines:"+ lines +" time: "+finaltime+"ms");
 
             start = System.currentTimeMillis();
             lines = Ex2_1.getNumOfLinesThreadPool(filesname);
             end = System.currentTimeMillis();
             finaltime=end-start;
-            System.out.println("Calculation time using function 4-  lines: "+ lines +" time: "+finaltime+"ms");
+            System.out.println("Calculation time using function 4-lines:"+ lines +" time: "+finaltime+"ms");
 
 
         }
