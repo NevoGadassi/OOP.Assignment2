@@ -90,3 +90,23 @@ Calculation time using function 4-lines:7376961 time: 540ms
 
 it's clear that the threadpool is the faster because its call to each file in the same time and save the answer
 and in the normal way we calculate file finish and start calculate the next one and its waste time
+
+
+## Part2
+
+The purpose of the assignment
+
+In this assignment-part 2: Create a new type that represents an asynchronous task 
+
+with priority and a new ThreadPool type that supports tasks with priority.
+
+Task - Class implements "Comparable" "Callable" interface. the class is callable class with priority option.
+
+ we made "compareTo" function in order to define to the priorityBlockingQueue to sort by priority.
+ 
+ CustomExecutor - Class extends ThreadPoolExecutor 
+ 
+ Type Enum to descript a Task object's type. Tasks will be :
+ * COMPUTATIONAL(1)
+ * IO(2)
+ * OTHER(3)
