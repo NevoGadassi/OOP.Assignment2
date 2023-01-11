@@ -5,7 +5,7 @@
 - Shani Basteker - 311318075
 
 ## Part1 - Make file's and count their lines Description
-![Part1Diagram](https://raw.githubusercontent.com/NevoGadassi/OOP.Assignment2/main/Part1/OOP2part1diagram.png)
+![Diagram](https://raw.githubusercontent.com/NevoGadassi/OOP.Assignment2/main/Part1/OOP2part1diagram.png)
 
 
 - ### Ex2_1 class
@@ -67,5 +67,15 @@ public Integer call() throws Exception
 when we run call  the LineCallAble calculating the total lines of this specific file and return it.
 
 In contrast to run , call return value and can throw exceptions
+
+- ### TestTime
+   class to calculate the runtime of each function that retuen the total number of lines of all files.
+   ```
+    String[] filesname = Ex2_1.createTextFiles( "number of file", "seed", "bound");
+            start = System.currentTimeMillis();
+            lines = Ex2_1."choose function to runtime"(filesname);
+            end = System.currentTimeMillis();
+            finaltime=end-start;
+ ```
 
 
