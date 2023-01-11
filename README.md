@@ -5,7 +5,7 @@
 - Shani Basteker - 311318075
 
 ## Part1 - Make file's and count their lines Description
-![Part1Diagram](https://user-images.githubusercontent.com/118805710/211622143-5cbbc9b1-93ec-4688-84c8-6f4403551ab7.png)
+![Part1Diagram](https://raw.githubusercontent.com/NevoGadassi/OOP.Assignment2/main/Part1/OOP2part1diagram.png)
 
 
 - ### Ex2_1 class
