@@ -91,22 +91,34 @@ Calculation time using function 4-lines:7376961 time: 540ms
 it's clear that the threadpool is the faster because its call to each file in the same time and save the answer
 and in the normal way we calculate file finish and start calculate the next one and its waste time
 
+## Part 2
 
-## Part2
+This part was created in order to prioritize the tasks in the threadPool of java.
+in order for it to happened we created:
 
-The purpose of the assignment
+- Task class - Callable task that returns value with priority enum.
+- CustomExecutor class - creates priority for all tasks. 
+- Taskadpter inner class 
 
-In this assignment-part 2: Create a new type that represents an asynchronous task 
+## Task 
 
-with priority and a new ThreadPool type that supports tasks with priority.
+The class holds a Callable function and an enum of type TaskType. It is able to compare priority based on the taskType.
+The class has two constructors, one that creates a task with a given function and taskType "OTHER" that creates a task with a given function and taskType.
 
-Task - Class implements "Comparable" "Callable" interface. the class is callable class with priority option.
+## CustomExecutor
 
- we made "compareTo" function in order to define to the priorityBlockingQueue to sort by priority.
- 
- CustomExecutor - Class extends ThreadPoolExecutor 
- 
- Type Enum to descript a Task object's type. Tasks will be :
- * COMPUTATIONAL(1)
- * IO(2)
- * OTHER(3)
+This is a custom thread pool executor class that allows tasks 
+to be submitted with priority.
+It uses a PriorityBlockingQueue to sort the tasks by priority by creating 
+ThreadPoolExecutor with the number of available processors.
+
+## TaskAdapter 
+
+This is an inner class within the CustomExecutor class. It is used to adapt the Task class to the FutureTask class,
+which is the type of task that can be executed by the ThreadPoolExecutor. The TaskAdapter class extends the FutureTask class,
+and also implements the Comparable interface. 
+It allowes the task objects that pass to submit method method of the CustomExecutor class
+to use elements in the priority queue. 
+It has a one constructor that uses Callable object and disguised as Task object. 
+Then it assigns the taskType by priority.
+the priority of the task returns by getPriority of the task. 
