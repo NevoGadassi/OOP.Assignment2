@@ -7,7 +7,6 @@
 ## Part1 - Make file's and count their lines Description
 ![Diagram](https://raw.githubusercontent.com/NevoGadassi/OOP.Assignment2/main/Part1/OOP2part1diagram.png)
 
-
 - ### Ex2_1 class
 
 ```
@@ -91,7 +90,9 @@ Calculation time using function 4-lines:7376961 time: 540ms
 it's clear that the threadpool is the faster because its call to each file in the same time and save the answer
 and in the normal way we calculate file finish and start calculate the next one and its waste time
 
+
 ## Part 2
+![Diagram](https://github.com/NevoGadassi/OOP.Assignment2/blob/main/Part2/OOP2part2diagram.png)
 
 This part was created in order to prioritize the tasks in the threadPool of java.
 in order for it to happened we created:
